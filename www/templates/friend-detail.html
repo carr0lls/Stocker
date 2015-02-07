@@ -1,0 +1,22 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'firend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view title="{{friend.name}}" ng-controller="CardsCtrl">
+  <ion-content has-header="true" padding="true">
+
+      <td-cards>
+        <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+          <div class="image" ng-controller="CardCtrl">
+            <div class="no-text">no</div>
+            <img ng-src="{{card.image}}">
+            <div class="yes-text">yes</div>
+          </div>
+        </td-card>
+      </td-cards>
+
+    </div>
+  </ion-content>
+</ion-view>
