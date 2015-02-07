@@ -83,6 +83,12 @@ angular.module('starter', ['ionic',
           controller: 'AccountCtrl'
         }
       }
+    })
+
+    .state('home', {
+      url: '/home',
+      templateUrl: 'templates/home.html',
+      controller: 'HomeCtrl'
     });
 
 
@@ -94,7 +100,7 @@ angular.module('starter', ['ionic',
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/friends');
+  $urlRouterProvider.otherwise('/home');
 
   jwtInterceptorProvider.tokenGetter = function(store, jwtHelper, auth) {
     var idToken = store.get('token');

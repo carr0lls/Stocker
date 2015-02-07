@@ -1,0 +1,21 @@
+<ion-view title="Home" ng-controller="CardsCtrl">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear button-positive" ng-click="showFriends()">
+      Menu
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+
+  <td-cards>
+    <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+      <div class="image" ng-controller="CardCtrl">
+        <div class="no-text">no</div>
+        <img ng-src="{{card.image}}">
+        <div class="yes-text">yes</div>
+      </div>
+    </td-card>
+  </td-cards>
+
+
+  </ion-content>
+</ion-view>
