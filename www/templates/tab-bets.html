@@ -1,0 +1,30 @@
+<ion-view title="Stocks">
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+
+
+
+
+
+  <ion-content class="has-header">
+    That will be a list of bets
+
+    <ion-pane ng-controller="CardsCtrl">
+      <ion-header-bar class="bar-default">
+        <h1 class="title">TD Cards</h1>
+      </ion-header-bar>
+
+      <td-cards>
+        <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+          <div class="image" ng-controller="CardCtrl">
+            <div class="no-text">NOPE</div>
+            <img ng-src="{{card.image}}">
+            <div class="yes-text">LIKE</div>
+          </div>
+        </td-card>
+      </td-cards>
+    </ion-pane>
+
+
+  </ion-content>
+</ion-view>

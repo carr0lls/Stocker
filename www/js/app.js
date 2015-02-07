@@ -8,6 +8,7 @@
 angular.module('starter', ['ionic',
   'starter.controllers',
   'starter.services',
+  'stock.services',
   'auth0',
   'angular-storage',
   'angular-jwt',
@@ -83,7 +84,34 @@ angular.module('starter', ['ionic',
           controller: 'AccountCtrl'
         }
       }
-    });
+    })
+      .state('tab.bets', {
+        url: '/bets',
+        views: {
+          'tab-bets': {
+            templateUrl: 'templates/tab-bets.html'
+          }
+        }
+      })
+      .state('tab.stocks', {
+        url: '/stocks',
+        views: {
+          'tab-stocks': {
+            templateUrl: 'templates/tab-stocks.html',
+            controller: 'StockController'
+          }
+        }
+      })
+      .state('tab.stock-detail', {
+        url: '/stock/:stockId',
+        views: {
+          'tab-friends': {
+            templateUrl: 'templates/stock-detail.html',
+            controller: 'StockDetailController'
+          }
+        }
+      })
+  ;
 
 
   // Configure Auth0

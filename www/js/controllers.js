@@ -102,7 +102,15 @@ angular.module('starter.controllers', ['ionic', 'ionic.contrib.ui.tinderCards'])
     }
   }
 })
+.controller('StockController', function($scope, StockService) {
 
+    $scope.stocks = StockService.all();
+
+})
+
+.controller('StockDetailController', function($scope, $stateParams, StockService) {
+    $scope.stock = StockService.get($stateParams.stockId);
+})
 .controller('CardsCtrl', function($scope, TDCardDelegate) {
   var cardTypes = [
     { image: 'img/max.jpg' },
