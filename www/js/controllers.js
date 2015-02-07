@@ -88,6 +88,10 @@ angular.module('starter.controllers', ['ionic', 'ionic.contrib.ui.tinderCards'])
   }
 })
 
+.controller('HomeCtrl', function($scope, auth, $state, store) {
+
+})
+
 // Tinder Cards
 
 .directive('noScroll', function() {
