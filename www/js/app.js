@@ -89,7 +89,8 @@ angular.module('starter', ['ionic',
         url: '/bets',
         views: {
           'tab-bets': {
-            templateUrl: 'templates/tab-bets.html'
+            templateUrl: 'templates/tab-bets.html',
+            controller: 'StockCardsCtrl'
           }
         }
       })
