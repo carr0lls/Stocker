@@ -16,7 +16,7 @@ angular.module('starter.controllers', ['ionic', 'ionic.contrib.ui.tinderCards'])
       api: 'firebase'
     }).then(function(delegation) {
       store.set('firebaseToken', delegation.id_token);
-      $state.go('tab.stocks');
+      $state.go('tab.bets');
     }, function(error) {
       console.log("There was an error logging in", error);
     })
@@ -133,9 +133,6 @@ angular.module('starter.controllers', ['ionic', 'ionic.contrib.ui.tinderCards'])
             format: function (d) { return "$" + d.toFixed(2); }
           }
         }
-      },
-      point: {
-        show: false
       }
     });
 

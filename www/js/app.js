@@ -106,7 +106,7 @@ angular.module('starter', ['ionic',
       .state('tab.stock-detail', {
         url: '/stock/:stockId',
         views: {
-          'tab-friends': {
+          'tab-stocks': {
             templateUrl: 'templates/stock-detail.html',
             controller: 'StockDetailController'
           }
@@ -127,7 +127,7 @@ angular.module('starter', ['ionic',
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/tab/bets');
 
   jwtInterceptorProvider.tokenGetter = function(store, jwtHelper, auth) {
     var idToken = store.get('token');
