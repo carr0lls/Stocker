@@ -12,8 +12,14 @@
           <div class="item item-divider item-positive">
             {{card.name}}
             <br>
-            {{card.quoteName}}: {{card.quotes[card.quotes.length-1].price}}
+            <div ng-show="card.quotes[card.quotes.length-1].up">
+              <span class="badge badge-assertive">{{card.quoteName}}: {{card.quotes[card.quotes.length-1].price}}</span>
+            </div>
+            <div ng-show="!card.quotes[card.quotes.length-1].up">
+              <span class="badge badge-balanced">{{card.quoteName}}: {{card.quotes[card.quotes.length-1].price}}</span>
+            </div>
           </div>
+
           <div class="item item-body">
             <p>
               {{card.description | cut:true:200:' ...'}}
