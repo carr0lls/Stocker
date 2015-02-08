@@ -133,6 +133,9 @@ angular.module('starter.controllers', ['ionic', 'ionic.contrib.ui.tinderCards'])
             format: function (d) { return "$" + d.toFixed(2); }
           }
         }
+      },
+      point: {
+        show: false
       }
     });
 
