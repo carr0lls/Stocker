@@ -7,18 +7,21 @@
 
     <td-cards>
       <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
-        <div class="image" ng-controller="StockCardCtrl">
+        <div class="list card " ng-controller="StockCardCtrl">
           <div class="no-text">Down</div>
-
-          {{card.name}}
-
-
-
+          <div class="item item-divider item-positive">
+            {{card.name}}
+            <br>
+            NASDAQ: {{card.quoteName}}
+          </div>
+          <div class="item item-body">
+            <p>
+              {{card.description}}
+            </p>
+          </div>
           <div class="yes-text">Up</div>
         </div>
-      </td-card>
     </td-cards>
-
     </div>
   </ion-content>
 
