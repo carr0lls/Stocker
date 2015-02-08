@@ -41,10 +41,10 @@ public class Stock {
 		prices.add(new Quote(bd.doubleValue()));
 	}
 	
-	public Stock(String quote, String name, double price){
+	public Stock(String quote, String name, double price, String description){
 		this.quote = quote;
 		this.name = name;
 		prices.add(new Quote(price));
-		//this.description = description;
+		this.description = description;
 	}
 }
