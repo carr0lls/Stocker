@@ -110,6 +110,46 @@ angular.module('starter.controllers', ['ionic', 'ionic.contrib.ui.tinderCards'])
 
 .controller('StockDetailController', function($scope, $stateParams, StockService) {
     $scope.stock = StockService.get($stateParams.stockId);
+
+    var graph = c3.generate({
+      bindto: '#graph',
+      data: {
+        x: 'date',
+        xFormat: '%Y-%m-%d %H:%M:%S',
+        json: $scope.stock.quotes,
+        keys: {
+          value: ['date','price']
+        }
+      },
+      axis: {
+        x: {
+          type: 'timeseries',
+          tick: {
+            format: '%H:%M:%S'
+          }
+        },
+        y: {
+          tick: {
+            format: function (d) { return "$" + d.toFixed(2); }
+          }
+        }
+      }
+    });
+
+    setInterval(function(){
+      $scope.stock = StockService.get($stateParams.stockId);
+      
+      graph.load({
+        x: 'date',
+        xFormat: '%Y-%m-%d %H:%M:%S',
+        json: $scope.stock.quotes,
+        keys: {
+          value: ['date','price']
+        }
+      });
+
+      console.log('new data', $scope.stock.quotes.length);
+    }, 2000);
 })
 
 .controller('StockCardsCtrl', function($scope, TDCardDelegate, StockService) {
