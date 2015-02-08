@@ -66,3 +66,7 @@ td-card img {
   transition: 0.2s opacity linear;
   opacity: 0;
 }
+
+.card .item-divider{
+  border-radius: 6px 6px 0 0;
+}
