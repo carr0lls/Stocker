@@ -71,8 +71,13 @@ td-card img {
   border-radius: 6px 6px 0 0;
 }
 
-.card .item-body {
+td-card {
+  background-color: white;
+}
+
+.td-card .item-body {
   padding: 10px 16px 16px 10px;
+  border-bottom: 0px;
 }
 
 .card #graph {
