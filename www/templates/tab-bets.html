@@ -16,7 +16,7 @@
           </div>
           <div class="item item-body">
             <p>
-              {{card.description}}
+              {{card.description | cut:true:200:' ...'}}
             </p>
           </div>
           <div class="yes-text">Up</div>
