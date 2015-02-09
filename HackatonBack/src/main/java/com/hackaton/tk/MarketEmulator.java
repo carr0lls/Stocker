@@ -14,7 +14,7 @@ public class MarketEmulator {
 	
 	
 	private static Map<String, Stock> stocks = StaticData.stocks;
-	private static Firebase ref = new Firebase("https://glaring-inferno-4364.firebaseio.com/");
+	private static Firebase ref = new Firebase("https://caroaf.firebaseio.com/");
 	
 	public static void main(String[] args) {
 		Thread generator = getGeneratorThread();

@@ -5,7 +5,7 @@ angular.module('stock.services', ['firebase'])
  */
 .service('StockService', function($firebase, store, $state) {
 
-  var stocksRef = new Firebase("https://glaring-inferno-4364.firebaseio.com/stocks");
+  var stocksRef = new Firebase("https://caroaf.firebaseio.com/stocks");
       stocksRef.authWithCustomToken(store.get('firebaseToken'), function(error, auth) {
     if (error) {
       // There was an error logging in, redirect the user to login page
@@ -39,7 +39,7 @@ angular.module('stock.services', ['firebase'])
 })
     .service('BetService', function($firebase, store, $state) {
 
-      var betsRef = new Firebase("https://glaring-inferno-4364.firebaseio.com/bets");
+      var betsRef = new Firebase("https://caroaf.firebaseio.com/bets");
       betsRef.authWithCustomToken(store.get('firebaseToken'), function(error, auth) {
         if (error) {
           // There was an error logging in, redirect the user to login page
