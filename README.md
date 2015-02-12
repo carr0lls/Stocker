@@ -1,6 +1,4 @@
 # Stocker
-
-<h3>Intro</h3>
 Stocker is a real-time hybrid (web, iOS, Android) application that was created at the <a href="http://hack-a-ton.com/sf">_HACK_A_TON_SF</a> event sponsored by <a href="http://ionicframework.com/">Ionic</a>, <a href="https://www.firebase.com/">Firebase</a>, <a href="https://auth0.com/">Auth0</a>, and <a href="http://socket.io/">Socket.io</a> on February 7, 2015. In short, Stocker is a "Tinder" for Stocks. Swipe right to place a bet, swipe left to pass, with real-time data graphs that show the flucation of stocks. The Stocker team consisted of five members including <a href="https://www.linkedin.com/in/carrollyu">Carroll Yu</a>, <a href="https://www.linkedin.com/in/seewes">Wesley Pascual</a>, Antoine Lefebvre, Sébastien Tessot, Jaime Kornick. It was the second place winner of the hackathon.
 
 ![example 1](/docs/imgs/ex1.png?raw=true "Example 1")   ![example 2](/docs/imgs/ex2.png?raw=true "Example 2")
